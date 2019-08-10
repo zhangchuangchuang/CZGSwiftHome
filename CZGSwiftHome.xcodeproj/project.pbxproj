@@ -3,16 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7C490E1DE7F82D9E0E546661 /* Pods_CZGSwiftHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD537510B663E6F8938B8F43 /* Pods_CZGSwiftHome.framework */; };
+		F400AFDE22FEA9E100780B64 /* App使用规则说明.txt in Resources */ = {isa = PBXBuildFile; fileRef = F400AFDD22FEA9E000780B64 /* App使用规则说明.txt */; };
+		F4F2AA4922FEB8D7007BD545 /* ZCBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2AA4822FEB8D7007BD545 /* ZCBaseViewController.swift */; };
+		F4F2AA4B22FEB937007BD545 /* ZCBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2AA4A22FEB937007BD545 /* ZCBaseNavigationController.swift */; };
+		F4F2AA4D22FEB9E5007BD545 /* ZCWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2AA4C22FEB9E5007BD545 /* ZCWebViewController.swift */; };
+		F4F2AA4F22FEBA35007BD545 /* ZCBaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2AA4E22FEBA35007BD545 /* ZCBaseTabBarController.swift */; };
+		F4F2AA5122FEBAA5007BD545 /* ZCBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2AA5022FEBAA5007BD545 /* ZCBaseViewModel.swift */; };
+		F4F2AA5322FEBAB6007BD545 /* ZCBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2AA5222FEBAB6007BD545 /* ZCBaseModel.swift */; };
 		F4FA19FE22E86216007EA60F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA19FD22E86216007EA60F /* AppDelegate.swift */; };
-		F4FA1A0022E86216007EA60F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA19FF22E86216007EA60F /* ViewController.swift */; };
 		F4FA1A0322E86216007EA60F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4FA1A0122E86216007EA60F /* Main.storyboard */; };
 		F4FA1A0522E86218007EA60F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4FA1A0422E86218007EA60F /* Assets.xcassets */; };
-		F4FA1A0822E86218007EA60F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4FA1A0622E86218007EA60F /* LaunchScreen.storyboard */; };
 		F4FA1A1322E86218007EA60F /* CZGSwiftHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA1A1222E86218007EA60F /* CZGSwiftHomeTests.swift */; };
 		F4FA1A1E22E86219007EA60F /* CZGSwiftHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA1A1D22E86219007EA60F /* CZGSwiftHomeUITests.swift */; };
 /* End PBXBuildFile section */
@@ -38,12 +43,17 @@
 		BD537510B663E6F8938B8F43 /* Pods_CZGSwiftHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CZGSwiftHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C74AD48C03A583656728D425 /* Pods-CZGSwiftHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CZGSwiftHome.release.xcconfig"; path = "Target Support Files/Pods-CZGSwiftHome/Pods-CZGSwiftHome.release.xcconfig"; sourceTree = "<group>"; };
 		E5EA3833869D34C7A8CF30C8 /* Pods-CZGSwiftHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CZGSwiftHome.debug.xcconfig"; path = "Target Support Files/Pods-CZGSwiftHome/Pods-CZGSwiftHome.debug.xcconfig"; sourceTree = "<group>"; };
+		F400AFDD22FEA9E000780B64 /* App使用规则说明.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "App使用规则说明.txt"; sourceTree = "<group>"; };
+		F4F2AA4822FEB8D7007BD545 /* ZCBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseViewController.swift; sourceTree = "<group>"; };
+		F4F2AA4A22FEB937007BD545 /* ZCBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseNavigationController.swift; sourceTree = "<group>"; };
+		F4F2AA4C22FEB9E5007BD545 /* ZCWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCWebViewController.swift; sourceTree = "<group>"; };
+		F4F2AA4E22FEBA35007BD545 /* ZCBaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseTabBarController.swift; sourceTree = "<group>"; };
+		F4F2AA5022FEBAA5007BD545 /* ZCBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseViewModel.swift; sourceTree = "<group>"; };
+		F4F2AA5222FEBAB6007BD545 /* ZCBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseModel.swift; sourceTree = "<group>"; };
 		F4FA19FA22E86216007EA60F /* CZGSwiftHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CZGSwiftHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4FA19FD22E86216007EA60F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F4FA19FF22E86216007EA60F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F4FA1A0222E86216007EA60F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4FA1A0422E86218007EA60F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F4FA1A0722E86218007EA60F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4FA1A0922E86218007EA60F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4FA1A0E22E86218007EA60F /* CZGSwiftHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CZGSwiftHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4FA1A1222E86218007EA60F /* CZGSwiftHomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CZGSwiftHomeTests.swift; sourceTree = "<group>"; };
@@ -93,8 +103,115 @@
 				E5EA3833869D34C7A8CF30C8 /* Pods-CZGSwiftHome.debug.xcconfig */,
 				C74AD48C03A583656728D425 /* Pods-CZGSwiftHome.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F400AFBE22FE946500780B64 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F400AFDF22FEAE1800780B64 /* Model */,
+				F400AFE022FEAE2500780B64 /* ViewModel */,
+				F400AFE122FEAE2C00780B64 /* View */,
+				F400AFE222FEAE3100780B64 /* Controller */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F400AFC022FE948F00780B64 /* categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = categories;
+			sourceTree = "<group>";
+		};
+		F400AFC122FE94AF00780B64 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F400AFBE22FE946500780B64 /* Base */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		F400AFC222FE94DB00780B64 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = frameworks;
+			sourceTree = "<group>";
+		};
+		F400AFC322FE952B00780B64 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		F400AFC422FE955F00780B64 /* AppEntry */ = {
+			isa = PBXGroup;
+			children = (
+				F4FA19FD22E86216007EA60F /* AppDelegate.swift */,
+				F4FA1A0122E86216007EA60F /* Main.storyboard */,
+				F4FA1A0922E86218007EA60F /* Info.plist */,
+				F4FA1A0422E86218007EA60F /* Assets.xcassets */,
+			);
+			path = AppEntry;
+			sourceTree = "<group>";
+		};
+		F400AFC622FE95FA00780B64 /* Utiltes */ = {
+			isa = PBXGroup;
+			children = (
+				F400AFC722FE962A00780B64 /* Helpers */,
+			);
+			path = Utiltes;
+			sourceTree = "<group>";
+		};
+		F400AFC722FE962A00780B64 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F400AFD822FEA83F00780B64 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F400AFDD22FEA9E000780B64 /* App使用规则说明.txt */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		F400AFDF22FEAE1800780B64 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F4F2AA5222FEBAB6007BD545 /* ZCBaseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F400AFE022FEAE2500780B64 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F4F2AA5022FEBAA5007BD545 /* ZCBaseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F400AFE122FEAE2C00780B64 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F400AFE222FEAE3100780B64 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F4F2AA4822FEB8D7007BD545 /* ZCBaseViewController.swift */,
+				F4F2AA4A22FEB937007BD545 /* ZCBaseNavigationController.swift */,
+				F4F2AA4C22FEB9E5007BD545 /* ZCWebViewController.swift */,
+				F4F2AA4E22FEBA35007BD545 /* ZCBaseTabBarController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		F4FA19F122E86216007EA60F = {
@@ -122,12 +239,13 @@
 		F4FA19FC22E86216007EA60F /* CZGSwiftHome */ = {
 			isa = PBXGroup;
 			children = (
-				F4FA19FD22E86216007EA60F /* AppDelegate.swift */,
-				F4FA19FF22E86216007EA60F /* ViewController.swift */,
-				F4FA1A0122E86216007EA60F /* Main.storyboard */,
-				F4FA1A0422E86218007EA60F /* Assets.xcassets */,
-				F4FA1A0622E86218007EA60F /* LaunchScreen.storyboard */,
-				F4FA1A0922E86218007EA60F /* Info.plist */,
+				F400AFC122FE94AF00780B64 /* Features */,
+				F400AFC022FE948F00780B64 /* categories */,
+				F400AFC222FE94DB00780B64 /* frameworks */,
+				F400AFC322FE952B00780B64 /* Vendors */,
+				F400AFC622FE95FA00780B64 /* Utiltes */,
+				F400AFD822FEA83F00780B64 /* Config */,
+				F400AFC422FE955F00780B64 /* AppEntry */,
 			);
 			path = CZGSwiftHome;
 			sourceTree = "<group>";
@@ -256,8 +374,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4FA1A0822E86218007EA60F /* LaunchScreen.storyboard in Resources */,
 				F4FA1A0522E86218007EA60F /* Assets.xcassets in Resources */,
+				F400AFDE22FEA9E100780B64 /* App使用规则说明.txt in Resources */,
 				F4FA1A0322E86216007EA60F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,7 +443,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4FA1A0022E86216007EA60F /* ViewController.swift in Sources */,
+				F4F2AA5122FEBAA5007BD545 /* ZCBaseViewModel.swift in Sources */,
+				F4F2AA4B22FEB937007BD545 /* ZCBaseNavigationController.swift in Sources */,
+				F4F2AA4F22FEBA35007BD545 /* ZCBaseTabBarController.swift in Sources */,
+				F4F2AA5322FEBAB6007BD545 /* ZCBaseModel.swift in Sources */,
+				F4F2AA4922FEB8D7007BD545 /* ZCBaseViewController.swift in Sources */,
+				F4F2AA4D22FEB9E5007BD545 /* ZCWebViewController.swift in Sources */,
 				F4FA19FE22E86216007EA60F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,14 +491,6 @@
 				F4FA1A0222E86216007EA60F /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F4FA1A0622E86218007EA60F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F4FA1A0722E86218007EA60F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -504,7 +619,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49S365C6A7;
-				INFOPLIST_FILE = CZGSwiftHome/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CZGSwiftHome/AppEntry/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -523,7 +638,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49S365C6A7;
-				INFOPLIST_FILE = CZGSwiftHome/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CZGSwiftHome/AppEntry/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
