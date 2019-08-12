@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		7C490E1DE7F82D9E0E546661 /* Pods_CZGSwiftHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD537510B663E6F8938B8F43 /* Pods_CZGSwiftHome.framework */; };
 		F400AFDE22FEA9E100780B64 /* App使用规则说明.txt in Resources */ = {isa = PBXBuildFile; fileRef = F400AFDD22FEA9E000780B64 /* App使用规则说明.txt */; };
+		F4307F4A23014F4E00964CCB /* UIColor+ZCTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4307F4923014F4E00964CCB /* UIColor+ZCTool.swift */; };
+		F4307F4F2301593900964CCB /* ZCMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4307F4E2301593900964CCB /* ZCMacros.swift */; };
+		F4307F512301840400964CCB /* UIView+ZCTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4307F502301840400964CCB /* UIView+ZCTool.swift */; };
+		F4307F53230185E800964CCB /* UIImage+ZCTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4307F52230185E800964CCB /* UIImage+ZCTool.swift */; };
 		F4F2AA4922FEB8D7007BD545 /* ZCBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2AA4822FEB8D7007BD545 /* ZCBaseViewController.swift */; };
 		F4F2AA4B22FEB937007BD545 /* ZCBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2AA4A22FEB937007BD545 /* ZCBaseNavigationController.swift */; };
 		F4F2AA4D22FEB9E5007BD545 /* ZCWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2AA4C22FEB9E5007BD545 /* ZCWebViewController.swift */; };
@@ -44,6 +48,10 @@
 		C74AD48C03A583656728D425 /* Pods-CZGSwiftHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CZGSwiftHome.release.xcconfig"; path = "Target Support Files/Pods-CZGSwiftHome/Pods-CZGSwiftHome.release.xcconfig"; sourceTree = "<group>"; };
 		E5EA3833869D34C7A8CF30C8 /* Pods-CZGSwiftHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CZGSwiftHome.debug.xcconfig"; path = "Target Support Files/Pods-CZGSwiftHome/Pods-CZGSwiftHome.debug.xcconfig"; sourceTree = "<group>"; };
 		F400AFDD22FEA9E000780B64 /* App使用规则说明.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "App使用规则说明.txt"; sourceTree = "<group>"; };
+		F4307F4923014F4E00964CCB /* UIColor+ZCTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ZCTool.swift"; sourceTree = "<group>"; };
+		F4307F4E2301593900964CCB /* ZCMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMacros.swift; sourceTree = "<group>"; };
+		F4307F502301840400964CCB /* UIView+ZCTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ZCTool.swift"; sourceTree = "<group>"; };
+		F4307F52230185E800964CCB /* UIImage+ZCTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ZCTool.swift"; sourceTree = "<group>"; };
 		F4F2AA4822FEB8D7007BD545 /* ZCBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseViewController.swift; sourceTree = "<group>"; };
 		F4F2AA4A22FEB937007BD545 /* ZCBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseNavigationController.swift; sourceTree = "<group>"; };
 		F4F2AA4C22FEB9E5007BD545 /* ZCWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCWebViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +128,9 @@
 		F400AFC022FE948F00780B64 /* categories */ = {
 			isa = PBXGroup;
 			children = (
+				F4307F4923014F4E00964CCB /* UIColor+ZCTool.swift */,
+				F4307F502301840400964CCB /* UIView+ZCTool.swift */,
+				F4307F52230185E800964CCB /* UIImage+ZCTool.swift */,
 			);
 			path = categories;
 			sourceTree = "<group>";
@@ -160,6 +171,7 @@
 		F400AFC622FE95FA00780B64 /* Utiltes */ = {
 			isa = PBXGroup;
 			children = (
+				F4307F4D2301592100964CCB /* Macros */,
 				F400AFC722FE962A00780B64 /* Helpers */,
 			);
 			path = Utiltes;
@@ -212,6 +224,14 @@
 				F4F2AA4E22FEBA35007BD545 /* ZCBaseTabBarController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		F4307F4D2301592100964CCB /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				F4307F4E2301593900964CCB /* ZCMacros.swift */,
+			);
+			path = Macros;
 			sourceTree = "<group>";
 		};
 		F4FA19F122E86216007EA60F = {
@@ -445,11 +465,15 @@
 			files = (
 				F4F2AA5122FEBAA5007BD545 /* ZCBaseViewModel.swift in Sources */,
 				F4F2AA4B22FEB937007BD545 /* ZCBaseNavigationController.swift in Sources */,
+				F4307F4A23014F4E00964CCB /* UIColor+ZCTool.swift in Sources */,
 				F4F2AA4F22FEBA35007BD545 /* ZCBaseTabBarController.swift in Sources */,
 				F4F2AA5322FEBAB6007BD545 /* ZCBaseModel.swift in Sources */,
+				F4307F4F2301593900964CCB /* ZCMacros.swift in Sources */,
 				F4F2AA4922FEB8D7007BD545 /* ZCBaseViewController.swift in Sources */,
 				F4F2AA4D22FEB9E5007BD545 /* ZCWebViewController.swift in Sources */,
 				F4FA19FE22E86216007EA60F /* AppDelegate.swift in Sources */,
+				F4307F512301840400964CCB /* UIView+ZCTool.swift in Sources */,
+				F4307F53230185E800964CCB /* UIImage+ZCTool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
