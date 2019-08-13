@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7C490E1DE7F82D9E0E546661 /* Pods_CZGSwiftHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD537510B663E6F8938B8F43 /* Pods_CZGSwiftHome.framework */; };
 		F400AFDE22FEA9E100780B64 /* App使用规则说明.txt in Resources */ = {isa = PBXBuildFile; fileRef = F400AFDD22FEA9E000780B64 /* App使用规则说明.txt */; };
+		F40B92B62302E7040017074E /* ZCHomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40B92B52302E7040017074E /* ZCHomeTabBarController.swift */; };
 		F4307F4A23014F4E00964CCB /* UIColor+ZCTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4307F4923014F4E00964CCB /* UIColor+ZCTool.swift */; };
 		F4307F4F2301593900964CCB /* ZCMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4307F4E2301593900964CCB /* ZCMacros.swift */; };
 		F4307F512301840400964CCB /* UIView+ZCTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4307F502301840400964CCB /* UIView+ZCTool.swift */; };
@@ -20,7 +21,6 @@
 		F4F2AA5122FEBAA5007BD545 /* ZCBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2AA5022FEBAA5007BD545 /* ZCBaseViewModel.swift */; };
 		F4F2AA5322FEBAB6007BD545 /* ZCBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2AA5222FEBAB6007BD545 /* ZCBaseModel.swift */; };
 		F4FA19FE22E86216007EA60F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA19FD22E86216007EA60F /* AppDelegate.swift */; };
-		F4FA1A0322E86216007EA60F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4FA1A0122E86216007EA60F /* Main.storyboard */; };
 		F4FA1A0522E86218007EA60F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4FA1A0422E86218007EA60F /* Assets.xcassets */; };
 		F4FA1A1322E86218007EA60F /* CZGSwiftHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA1A1222E86218007EA60F /* CZGSwiftHomeTests.swift */; };
 		F4FA1A1E22E86219007EA60F /* CZGSwiftHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA1A1D22E86219007EA60F /* CZGSwiftHomeUITests.swift */; };
@@ -48,6 +48,7 @@
 		C74AD48C03A583656728D425 /* Pods-CZGSwiftHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CZGSwiftHome.release.xcconfig"; path = "Target Support Files/Pods-CZGSwiftHome/Pods-CZGSwiftHome.release.xcconfig"; sourceTree = "<group>"; };
 		E5EA3833869D34C7A8CF30C8 /* Pods-CZGSwiftHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CZGSwiftHome.debug.xcconfig"; path = "Target Support Files/Pods-CZGSwiftHome/Pods-CZGSwiftHome.debug.xcconfig"; sourceTree = "<group>"; };
 		F400AFDD22FEA9E000780B64 /* App使用规则说明.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "App使用规则说明.txt"; sourceTree = "<group>"; };
+		F40B92B52302E7040017074E /* ZCHomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCHomeTabBarController.swift; sourceTree = "<group>"; };
 		F4307F4923014F4E00964CCB /* UIColor+ZCTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ZCTool.swift"; sourceTree = "<group>"; };
 		F4307F4E2301593900964CCB /* ZCMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMacros.swift; sourceTree = "<group>"; };
 		F4307F502301840400964CCB /* UIView+ZCTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ZCTool.swift"; sourceTree = "<group>"; };
@@ -60,7 +61,6 @@
 		F4F2AA5222FEBAB6007BD545 /* ZCBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseModel.swift; sourceTree = "<group>"; };
 		F4FA19FA22E86216007EA60F /* CZGSwiftHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CZGSwiftHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4FA19FD22E86216007EA60F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F4FA1A0222E86216007EA60F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4FA1A0422E86218007EA60F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4FA1A0922E86218007EA60F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4FA1A0E22E86218007EA60F /* CZGSwiftHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CZGSwiftHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,7 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				F4FA19FD22E86216007EA60F /* AppDelegate.swift */,
-				F4FA1A0122E86216007EA60F /* Main.storyboard */,
 				F4FA1A0922E86218007EA60F /* Info.plist */,
 				F4FA1A0422E86218007EA60F /* Assets.xcassets */,
 			);
@@ -219,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				F4F2AA4822FEB8D7007BD545 /* ZCBaseViewController.swift */,
+				F40B92B52302E7040017074E /* ZCHomeTabBarController.swift */,
 				F4F2AA4A22FEB937007BD545 /* ZCBaseNavigationController.swift */,
 				F4F2AA4C22FEB9E5007BD545 /* ZCWebViewController.swift */,
 				F4F2AA4E22FEBA35007BD545 /* ZCBaseTabBarController.swift */,
@@ -396,7 +396,6 @@
 			files = (
 				F4FA1A0522E86218007EA60F /* Assets.xcassets in Resources */,
 				F400AFDE22FEA9E100780B64 /* App使用规则说明.txt in Resources */,
-				F4FA1A0322E86216007EA60F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +471,7 @@
 				F4F2AA4922FEB8D7007BD545 /* ZCBaseViewController.swift in Sources */,
 				F4F2AA4D22FEB9E5007BD545 /* ZCWebViewController.swift in Sources */,
 				F4FA19FE22E86216007EA60F /* AppDelegate.swift in Sources */,
+				F40B92B62302E7040017074E /* ZCHomeTabBarController.swift in Sources */,
 				F4307F512301840400964CCB /* UIView+ZCTool.swift in Sources */,
 				F4307F53230185E800964CCB /* UIImage+ZCTool.swift in Sources */,
 			);
@@ -507,17 +507,6 @@
 			targetProxy = F4FA1A1A22E86218007EA60F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		F4FA1A0122E86216007EA60F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F4FA1A0222E86216007EA60F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F4FA1A2022E86219007EA60F /* Debug */ = {
@@ -641,6 +630,7 @@
 			baseConfigurationReference = E5EA3833869D34C7A8CF30C8 /* Pods-CZGSwiftHome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49S365C6A7;
 				INFOPLIST_FILE = "$(SRCROOT)/CZGSwiftHome/AppEntry/Info.plist";
@@ -660,6 +650,7 @@
 			baseConfigurationReference = C74AD48C03A583656728D425 /* Pods-CZGSwiftHome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49S365C6A7;
 				INFOPLIST_FILE = "$(SRCROOT)/CZGSwiftHome/AppEntry/Info.plist";
