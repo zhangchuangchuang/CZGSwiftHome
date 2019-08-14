@@ -31,6 +31,10 @@ class ZCBaseNavigationController: UINavigationController {
         setIsUnGestureReturnController(isUnGestureReturnController: false)
         //默认背景色为白色
         setCustomNaviBackgroundColor(color: UIColor.white)
+        setCustomNaviTitleColor(color: AppColor.black)
+        self.navigationBar.isTranslucent = false
+        self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
+        
         
     }
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
@@ -38,7 +42,6 @@ class ZCBaseNavigationController: UINavigationController {
             viewController.automaticallyAdjustsScrollViewInsets = false
             return
         }
-        viewController.hidesBottomBarWhenPushed = true
         super.pushViewController(viewController, animated: true)
     }
 
@@ -68,10 +71,10 @@ class ZCBaseNavigationController: UINavigationController {
 extension ZCBaseNavigationController{
     
     private func deleteWindowSubviews() {//移除window上子视图
-        let win : UIWindow? = UIApplication.shared.keyWindow
-        for view in win!.subviews {
-            view.removeFromSuperview()
-        }
+//        let win : UIWindow? = UIApplication.shared.keyWindow
+//        for view in win!.subviews {
+//            view.removeFromSuperview()
+//        }
     }
     /** 设置导航栏背景色通过图片 **/
     func setCustomNaviBackgroundImageFormImage(image:UIImage){
@@ -85,7 +88,7 @@ extension ZCBaseNavigationController{
     }
     /** 设置导航栏标题颜色 **/
     func setCustomNaviTitleColor(color: UIColor){
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.italicSystemFont(ofSize: 16),NSAttributedString.Key.foregroundColor:color]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.italicSystemFont(ofSize: 12),NSAttributedString.Key.foregroundColor:color]
     }
     
     

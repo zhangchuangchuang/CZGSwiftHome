@@ -16,7 +16,7 @@ class ZCBaseTabBarController: UITabBarController {
         self.tabBar.barTintColor = UIColor.white
         self.tabBar.backgroundColor = UIColor.white
         self.tabBar.tintColor = UIColor.white
-        
+        self.selectedIndex = 0
         
     /**去除tabbar上的一跳灰色线条**/
         let img = UIImage.createCustomImageWithColor(color: UIColor.clear)
@@ -24,24 +24,29 @@ class ZCBaseTabBarController: UITabBarController {
         self.tabBar.shadowImage = img
         
         /**添加一条 自定义细线**/
-        let lineView = UIView(frame: CGRect(x: 0, y: (self.tabBarController?.tabBar.frame.size.height)!-0.5, width: UIScreen.main.bounds.size.width, height: 0.5))
+        let lineView = UIView(frame: CGRect(x: 0, y:0, width: UIScreen.main.bounds.size.width, height: 0.5))
         lineView.backgroundColor = RGB0X(hexValue: 0xdcdbdb)
         self.tabBar.addSubview(lineView)
     }
     func setTabBarImageWithTitleS(homeImageAry: NSArray, comtrollers: NSArray)  {
-        let selectHpmeAry = NSMutableArray(array: homeImageAry)
-        let vcArray = NSMutableArray()
+        var selectHpmeAry = [Any]()
+        selectHpmeAry = homeImageAry as! [Any]
+        
+        var vcArray = [Any]()
+        var vc : UIViewController?
         for viewController in comtrollers {
-           let vc = viewController as! UIViewController
-            let navi = ZCBaseNavigationController(rootViewController: vc)
-            vcArray.add(navi)
+            vc = viewController as? UIViewController
+            let navi = ZCBaseNavigationController.init(rootViewController: vc!)
+           vcArray.append(navi)
+            
         }
         self.viewControllers = vcArray as? [UIViewController]
         
-        for (index,value) in selectHpmeAry.enumerated() {
+        for index in 0..<selectHpmeAry.count {
             
-            let Vc = value as! UIViewController
-            Vc.tabBarItem = self.setTabBarItemWithImageName(imageName: selectHpmeAry[index] as! String, selectedImagename: selectHpmeAry[index] as! String, titleName: selectHpmeAry[index] as! String)
+            let Vc = self.viewControllers![index]
+            let arr = selectHpmeAry[index] as? Array<Any>
+            Vc.tabBarItem = self.setTabBarItemWithImageName(imageName: arr?[0] as! String, selectedImagename: arr?[1] as! String, titleName: arr?[2] as! String)
             
         }
     }

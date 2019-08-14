@@ -20,6 +20,14 @@
 		F4F2AA4F22FEBA35007BD545 /* ZCBaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2AA4E22FEBA35007BD545 /* ZCBaseTabBarController.swift */; };
 		F4F2AA5122FEBAA5007BD545 /* ZCBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2AA5022FEBAA5007BD545 /* ZCBaseViewModel.swift */; };
 		F4F2AA5322FEBAB6007BD545 /* ZCBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2AA5222FEBAB6007BD545 /* ZCBaseModel.swift */; };
+		F4F72AD42304063A0011F00F /* ZCHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F72AD22304063A0011F00F /* ZCHomeViewController.swift */; };
+		F4F72AD52304063A0011F00F /* ZCHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F72AD32304063A0011F00F /* ZCHomeViewController.xib */; };
+		F4F72ADB230424450011F00F /* ZCDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F72AD9230424450011F00F /* ZCDetailViewController.swift */; };
+		F4F72ADC230424450011F00F /* ZCDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F72ADA230424450011F00F /* ZCDetailViewController.xib */; };
+		F4F72ADF230424560011F00F /* ZCShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F72ADD230424560011F00F /* ZCShopViewController.swift */; };
+		F4F72AE0230424560011F00F /* ZCShopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F72ADE230424560011F00F /* ZCShopViewController.xib */; };
+		F4F72AE3230424680011F00F /* ZCUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F72AE1230424680011F00F /* ZCUserViewController.swift */; };
+		F4F72AE4230424680011F00F /* ZCUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F72AE2230424680011F00F /* ZCUserViewController.xib */; };
 		F4FA19FE22E86216007EA60F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA19FD22E86216007EA60F /* AppDelegate.swift */; };
 		F4FA1A0522E86218007EA60F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4FA1A0422E86218007EA60F /* Assets.xcassets */; };
 		F4FA1A1322E86218007EA60F /* CZGSwiftHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA1A1222E86218007EA60F /* CZGSwiftHomeTests.swift */; };
@@ -59,6 +67,14 @@
 		F4F2AA4E22FEBA35007BD545 /* ZCBaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseTabBarController.swift; sourceTree = "<group>"; };
 		F4F2AA5022FEBAA5007BD545 /* ZCBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseViewModel.swift; sourceTree = "<group>"; };
 		F4F2AA5222FEBAB6007BD545 /* ZCBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseModel.swift; sourceTree = "<group>"; };
+		F4F72AD22304063A0011F00F /* ZCHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCHomeViewController.swift; sourceTree = "<group>"; };
+		F4F72AD32304063A0011F00F /* ZCHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZCHomeViewController.xib; sourceTree = "<group>"; };
+		F4F72AD9230424450011F00F /* ZCDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCDetailViewController.swift; sourceTree = "<group>"; };
+		F4F72ADA230424450011F00F /* ZCDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZCDetailViewController.xib; sourceTree = "<group>"; };
+		F4F72ADD230424560011F00F /* ZCShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCShopViewController.swift; sourceTree = "<group>"; };
+		F4F72ADE230424560011F00F /* ZCShopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZCShopViewController.xib; sourceTree = "<group>"; };
+		F4F72AE1230424680011F00F /* ZCUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCUserViewController.swift; sourceTree = "<group>"; };
+		F4F72AE2230424680011F00F /* ZCUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZCUserViewController.xib; sourceTree = "<group>"; };
 		F4FA19FA22E86216007EA60F /* CZGSwiftHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CZGSwiftHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4FA19FD22E86216007EA60F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4FA1A0422E86218007EA60F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,6 +155,10 @@
 			isa = PBXGroup;
 			children = (
 				F400AFBE22FE946500780B64 /* Base */,
+				F4F72AD12304010A0011F00F /* Home */,
+				F4F72AD8230424180011F00F /* detail */,
+				F4F72AD6230424060011F00F /* shop */,
+				F4F72AD72304240D0011F00F /* user */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -232,6 +252,42 @@
 				F4307F4E2301593900964CCB /* ZCMacros.swift */,
 			);
 			path = Macros;
+			sourceTree = "<group>";
+		};
+		F4F72AD12304010A0011F00F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F4F72AD22304063A0011F00F /* ZCHomeViewController.swift */,
+				F4F72AD32304063A0011F00F /* ZCHomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F4F72AD6230424060011F00F /* shop */ = {
+			isa = PBXGroup;
+			children = (
+				F4F72ADD230424560011F00F /* ZCShopViewController.swift */,
+				F4F72ADE230424560011F00F /* ZCShopViewController.xib */,
+			);
+			path = shop;
+			sourceTree = "<group>";
+		};
+		F4F72AD72304240D0011F00F /* user */ = {
+			isa = PBXGroup;
+			children = (
+				F4F72AE1230424680011F00F /* ZCUserViewController.swift */,
+				F4F72AE2230424680011F00F /* ZCUserViewController.xib */,
+			);
+			path = user;
+			sourceTree = "<group>";
+		};
+		F4F72AD8230424180011F00F /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				F4F72AD9230424450011F00F /* ZCDetailViewController.swift */,
+				F4F72ADA230424450011F00F /* ZCDetailViewController.xib */,
+			);
+			path = detail;
 			sourceTree = "<group>";
 		};
 		F4FA19F122E86216007EA60F = {
@@ -395,6 +451,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4FA1A0522E86218007EA60F /* Assets.xcassets in Resources */,
+				F4F72AE0230424560011F00F /* ZCShopViewController.xib in Resources */,
+				F4F72AE4230424680011F00F /* ZCUserViewController.xib in Resources */,
+				F4F72AD52304063A0011F00F /* ZCHomeViewController.xib in Resources */,
+				F4F72ADC230424450011F00F /* ZCDetailViewController.xib in Resources */,
 				F400AFDE22FEA9E100780B64 /* App使用规则说明.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,7 +522,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4F72AE3230424680011F00F /* ZCUserViewController.swift in Sources */,
 				F4F2AA5122FEBAA5007BD545 /* ZCBaseViewModel.swift in Sources */,
+				F4F72AD42304063A0011F00F /* ZCHomeViewController.swift in Sources */,
 				F4F2AA4B22FEB937007BD545 /* ZCBaseNavigationController.swift in Sources */,
 				F4307F4A23014F4E00964CCB /* UIColor+ZCTool.swift in Sources */,
 				F4F2AA4F22FEBA35007BD545 /* ZCBaseTabBarController.swift in Sources */,
@@ -473,7 +535,9 @@
 				F4FA19FE22E86216007EA60F /* AppDelegate.swift in Sources */,
 				F40B92B62302E7040017074E /* ZCHomeTabBarController.swift in Sources */,
 				F4307F512301840400964CCB /* UIView+ZCTool.swift in Sources */,
+				F4F72ADB230424450011F00F /* ZCDetailViewController.swift in Sources */,
 				F4307F53230185E800964CCB /* UIImage+ZCTool.swift in Sources */,
+				F4F72ADF230424560011F00F /* ZCShopViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +631,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
 			};
 			name = Debug;
 		};
@@ -621,6 +686,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

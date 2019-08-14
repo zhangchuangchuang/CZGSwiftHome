@@ -13,9 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    var viewController: ZCBaseNavigationController?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.window = UIWindow.init(frame: UIScreen.main.bounds)
+        //初始化tabbar
+        let tabbarVC = ZCHomeTabBarController()
+        self.window!.rootViewController = tabbarVC
+        self.window!.makeKeyAndVisible()
+
         return true
     }
 
