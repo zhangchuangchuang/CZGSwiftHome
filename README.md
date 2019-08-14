@@ -28,16 +28,16 @@
          - ViewModel   数据ViewModel  
          - View           视图  
          - Controllers   控制器 （ZCBaseViewController,ZCBaseNavtionView,ZCBaseTabbarController）
-   - Home        主页视图  
-         - Model 模式同上
-         - View  模式同上 （继承基类）
-         - viewModel
-         - Controllers   ZCHomeViewController(继承基类 ZCBaseViewController) 同下
-   - detail     详情视图
-         - Model
-         - ViewModel
-         - View
-         - Controllers    ZCDetailViewController(继承 ZCBaseViewController)
+   - Home          主页视图   
+         - Model       模式同上   
+         - View        模式同上 （继承基类）   
+         - viewModel   
+         - Controllers   ZCHomeViewController(继承基类 ZCBaseViewController) 同下   
+   - detail          详情视图   
+         - Model   
+         - ViewModel   
+         - View   
+         - Controllers      ZCDetailViewController(继承 ZCBaseViewController)   
    - User       个人中心
    
    - shop       商城
