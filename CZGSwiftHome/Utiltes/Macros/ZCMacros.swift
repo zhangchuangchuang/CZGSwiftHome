@@ -153,6 +153,13 @@ public enum AppFrame {
     // tabBarHeight
     static let kTabBarHeight : CGFloat = iPhoneX ? 49 + 34 : 49
     
+    // 5.8寸屏幕下视图底部约束距离
+    static let k_5_8_BOTTOM  : CGFloat = iPhoneX ? 34 : 0
+    
+    
+    // 状态栏高度
+    static let kStatusBarHeight :CGFloat = UIApplication.shared.statusBarFrame.size.height
+    
     /** 如果是iPhoneX按照Plus 尺寸计算比例 */
     static let Scale_Height = iPhoneX ? 736.0/667.0 : ScreenHeight / 667
     static let Scale_Width = ScreenWidth / 375
