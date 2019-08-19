@@ -1,4 +1,5 @@
-# CZGSwiftHome
+# CZGSwiftHome  
+#### 因为项目周期问题 暂停更新一段时间
 项目商城Swift版本
 
 ```
