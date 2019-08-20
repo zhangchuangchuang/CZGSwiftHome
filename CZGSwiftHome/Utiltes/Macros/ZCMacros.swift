@@ -147,6 +147,8 @@ public enum AppFrame {
     // iphone X
     static let iPhoneX = ScreenHeight == 812 ? true : false
     
+    //
+    
     // navigationBarHeight
     static let kNavigationBarHeight : CGFloat = iPhoneX ? 88 : 64
     
