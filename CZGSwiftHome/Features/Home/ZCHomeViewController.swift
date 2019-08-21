@@ -10,6 +10,16 @@ import UIKit
 
 class ZCHomeViewController: ZCBaseViewController {
 
+    @IBOutlet var web_btn: UIButton!
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        self.view.backgroundColor = UIColor.red
@@ -17,6 +27,13 @@ class ZCHomeViewController: ZCBaseViewController {
     }
 
 
+    @IBAction func webButActionClick(_ sender: UIButton) {
+        let VC = ZCWebViewController();
+        VC.url = "https://www.baidu.com"
+        VC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(VC, animated: true)
+        
+    }
     /*
     // MARK: - Navigation
 

@@ -14,9 +14,11 @@ class ZCWebViewController: ZCBaseViewController,WKNavigationDelegate,WKUIDelegat
  
 
     var customWebView = WKWebView()
-    let url = String()
+    var closeBut = UIButton()
+    
+    var url = String()
     lazy private var progressView : UIProgressView = {
-        let progressView = UIProgressView.init(frame: CGRect(x: 0, y:AppFrame.kStatusBarHeight, width: AppFrame.ScreenWidth, height: 2))
+        let progressView = UIProgressView.init(frame: CGRect(x: 0, y: 0, width: AppFrame.ScreenWidth, height: 2))
         progressView.progressTintColor = AppColor.themeRed
         progressView.trackTintColor = UIColor.clear
         self.view.addSubview(progressView)
@@ -28,16 +30,24 @@ class ZCWebViewController: ZCBaseViewController,WKNavigationDelegate,WKUIDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = RGB0X(hexValue: 0xf6f6f6)
-      
+        setUI()
+        loadWeb(string: url)
+    }
+    //MARK: ++++ WKScriptMessageHandler
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        DispatchQueue.global().async {
+          
+            
+        }
     }
     
-    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        
-        
+    
+    deinit {
+        self.customWebView.removeObserver(self, forKeyPath: "estimatedProgress")
+        self.customWebView.removeObserver(self, forKeyPath: "frame")
     }
-  
 }
-
+//MARK:   -----界面相关   方法----
 extension ZCWebViewController{
     func setUI() {
         let configuration = WKWebViewConfiguration()
@@ -61,6 +71,7 @@ extension ZCWebViewController{
         self.customWebView.addObserver(self, forKeyPath: "frame", options: .new, context: nil)
         
     }
+    //更新进度条位置
     func updateProgressViewToFrame(){
         var progressRect = CGRect()
         progressRect = self.progressView.frame
@@ -68,11 +79,42 @@ extension ZCWebViewController{
         self.progressView.frame = progressRect
         
     }
-   
+    
+    //加载web
+    func loadWeb(string: String) -> Void {
+        let new_url = string.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let request = NSURLRequest(url: URL(string: new_url!)!, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 60)
+        self.customWebView.load(request as URLRequest)
+        
+    }
+    
+    
+    //添加关闭按钮
+    func addNaviCloseButton() {
+         removeNavIcloseBut()
+        self.closeBut = UIButton(type: .custom)
+        self.closeBut.frame = CGRect(x: 50, y:44, width: 100, height: 444)
+        self.closeBut.setTitle("关闭", for: .normal)
+        self.closeBut.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
+        self.closeBut.setTitleColor(RGB0X(hexValue: 0x556d80), for: .normal)
+        self.closeBut.addTarget(self, action: #selector(closeButAction), for: .touchUpInside)
+        self.navigationController?.navigationBar.addSubview(self.closeBut)
+    }
+    //每次加载钱 移除导航上的关闭按钮
+    func removeNavIcloseBut(){
+        self.closeBut.removeFromSuperview()
+    }
+    //按钮的点击事件
+    @objc func closeButAction(){
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
 }
 
 extension ZCWebViewController{
+    //webview 进度条监听
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "estimatedProgress" {
             if object as? WKWebView == self.customWebView{
@@ -126,9 +168,21 @@ extension ZCWebViewController{
         let scheme  = url?.scheme
         
         if scheme == "tel" {
+            //防止ios 10 及其以后 拨打电话系统弹出窗延迟出现
+            DispatchQueue.main.async {
+                if #available(iOS 10.0, *){
+                    UIApplication.shared.open(navigationAction.request.url!, options: [UIApplication.OpenExternalURLOptionsKey(rawValue: ""):""], completionHandler: { (tag) in})
+                }else{
+                     UIApplication.shared.openURL(navigationAction.request.url!)
+                }
+            }
             decisionHandler(WKNavigationActionPolicy.cancel)
 //           resourceSpecifier
+        }else{
+            decisionHandler(WKNavigationActionPolicy.allow)
         }
     }
+  
+    
     
 }

@@ -34,6 +34,7 @@ class ZCBaseNavigationController: UINavigationController {
         setCustomNaviTitleColor(color: AppColor.black)
         self.navigationBar.isTranslucent = false
         self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
+        self.customNavigationBackBarButtonItem(image: SetImage(string: "def_naviBack")! )
         
         
     }
@@ -96,22 +97,28 @@ extension ZCBaseNavigationController{
 //MARK: --自定义 导航栏上的控件按钮
 extension ZCBaseNavigationController{
     func customNavigationBackBarButtonItem(image: UIImage) {
-        for view  in self.navigationController!.navigationBar.subviews {
-            view.removeFromSuperview()
+        for view  in self.navigationBar.subviews {
+            if(view.isKind(of: UIBarButtonItem.self)){
+               view.removeFromSuperview()
+            }
         }
-        let imgBack :UIImage = image.withRenderingMode(.alwaysOriginal)
+        let imgBack = image.withRenderingMode(.alwaysOriginal)
+        
         /**替换系统蓝色箭头**/
         let customImage = UIImage.createCustomImageWithColor(color: UIColor.orange)
-        let backItem = UIBarButtonItem()
-        self.navigationController?.navigationBar.backIndicatorImage = customImage
-        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = customImage
-        self.navigationItem.backBarButtonItem = backItem
+//        let backItem = UIBarButtonItem()
+        self.navigationBar.backIndicatorImage = customImage
+        self.navigationBar.backIndicatorTransitionMaskImage = customImage
+//        self.navigationItem.backBarButtonItem = backItem
         
         /**修改返回按钮文字位置**/
         UIBarButtonItem.appearance()
             .setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -2000, vertical: 0), for: .default)
-        let leftButton = UIBarButtonItem(image: imgBack, style: .plain, target: self, action:#selector(backBarButtonItemAction))
-        self.navigationItem.leftBarButtonItems = [leftButton]
+//
+        let leftButton = UIBarButtonItem(image:UIImage.init(named: "btn_column_selected")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), style: .plain, target: self, action:#selector(backBarButtonItemAction))
+//        self.navigationBar.backIndicatorImage = imgBack
+//        self.navigationBar.backIndicatorTransitionMaskImage = imgBack
+        self.navigationItem.leftBarButtonItem = leftButton
         
     }
     
