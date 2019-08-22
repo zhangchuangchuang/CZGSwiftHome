@@ -10,9 +10,6 @@ import UIKit
 
 class ZCBaseNavigationController: UINavigationController {
 
-   
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,9 +31,7 @@ class ZCBaseNavigationController: UINavigationController {
         setCustomNaviTitleColor(color: AppColor.black)
         self.navigationBar.isTranslucent = false
         self.edgesForExtendedLayout = UIRectEdge.init(rawValue: 0)
-        self.customNavigationBackBarButtonItem(image: SetImage(string: "def_naviBack")! )
-        
-        
+      
     }
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         guard #available(iOS 11.0, *) else {
@@ -96,37 +91,7 @@ extension ZCBaseNavigationController{
 }
 //MARK: --自定义 导航栏上的控件按钮
 extension ZCBaseNavigationController{
-    func customNavigationBackBarButtonItem(image: UIImage) {
-        for view  in self.navigationBar.subviews {
-            if(view.isKind(of: UIBarButtonItem.self)){
-               view.removeFromSuperview()
-            }
-        }
-        let imgBack = image.withRenderingMode(.alwaysOriginal)
-        
-        /**替换系统蓝色箭头**/
-        let customImage = UIImage.createCustomImageWithColor(color: UIColor.orange)
-//        let backItem = UIBarButtonItem()
-        self.navigationBar.backIndicatorImage = customImage
-        self.navigationBar.backIndicatorTransitionMaskImage = customImage
-//        self.navigationItem.backBarButtonItem = backItem
-        
-        /**修改返回按钮文字位置**/
-        UIBarButtonItem.appearance()
-            .setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -2000, vertical: 0), for: .default)
-//
-        let leftButton = UIBarButtonItem(image:UIImage.init(named: "btn_column_selected")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), style: .plain, target: self, action:#selector(backBarButtonItemAction))
-//        self.navigationBar.backIndicatorImage = imgBack
-//        self.navigationBar.backIndicatorTransitionMaskImage = imgBack
-        self.navigationItem.leftBarButtonItem = leftButton
-        
-    }
-    
-    /**返回按钮事件（子类可重写）**/
-    @objc func backBarButtonItemAction(){
-        self.navigationController?.popViewController(animated: true)
-    }
-    
+  
     //设置右侧操作按钮
     func setHandleButton(frame: CGRect,image:UIImage?, title:String, target:UIViewController?,action: Selector?) -> UIButton {
         let handleButton = UIButton(type: .custom)
@@ -149,5 +114,57 @@ extension ZCBaseNavigationController{
 extension ZCBaseNavigationController:UIGestureRecognizerDelegate{
      func setIsUnGestureReturnController(isUnGestureReturnController: Bool) {
       self.interactivePopGestureRecognizer?.isEnabled = !isUnGestureReturnController
+    }
+}
+
+//自定义NAvigationController 返回按钮
+
+@objc protocol ZCNavigationBackBarButtonItemDelegate:NSObjectProtocol {
+    @objc optional func backBarButtonItemImage() ->UIImage
+}
+
+extension UIViewController:SelfAware,ZCNavigationBackBarButtonItemDelegate{
+    
+    static func awake() {
+        NSObject_ZCTool.changeMethodsWithObject(object:UIViewController.classForCoder(), targetSel: #selector(viewDidLoad), toSel: #selector(barButtonItem_viewDidLoad))
+    }
+ 
+    @objc func barButtonItem_viewDidLoad(){
+        barButtonItem_viewDidLoad()
+        let img = UIImage.init(named: "def_naviBack")
+        
+//        if backBarButtonItemImage?(){
+//
+//        }
+        customNavigationBackBarButtonItem(image: img!)
+    }
+    //自定义导航栏 返回按钮
+    func customNavigationBackBarButtonItem(image: UIImage) {
+//        for view  in self.navigationController!.navigationBar.subviews {
+//            if(view.isKind(of: UIBarButtonItem.self)){
+//                view.removeFromSuperview()
+//            }
+//        }
+        let imgBack = image.withRenderingMode(.alwaysOriginal)
+        
+        /**替换系统蓝色箭头**/
+        let customImage = UIImage.createCustomImageWithColor(color: UIColor.orange)
+        //        let backItem = UIBarButtonItem()
+        self.navigationController?.navigationBar.backIndicatorImage = customImage
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = customImage
+        //        self.navigationItem.backBarButtonItem = backItem
+        
+        /**修改返回按钮文字位置**/
+        UIBarButtonItem.appearance()
+            .setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -2000, vertical: 0), for: .default)
+        let leftButton = UIBarButtonItem(image:imgBack, style: .plain, target: self, action:#selector(backBarButtonItemAction))
+        
+        self.navigationItem.leftBarButtonItem = leftButton
+        
+    }
+    
+    /**返回按钮事件（子类可重写）**/
+    @objc func backBarButtonItemAction(){
+        self.navigationController?.popViewController(animated: true)
     }
 }

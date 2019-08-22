@@ -109,7 +109,7 @@ public enum APPDevice{
 
 //MARK: - 日志输出
 // <T>: 为泛型，外界传入什么就是什么
-func BJDLog<T>(_ message: T, file: String = #file, method: String = #function, line: Int = #line) {
+func NSLog<T>(_ message: T, file: String = #file, method: String = #function, line: Int = #line) {
     
     if AppConstants.LogDebug {
         
@@ -258,3 +258,5 @@ func ViewRadius(View:UIView,Radius:CGFloat) -> UIView {
 func SetImage(string: String) -> (UIImage)? {
     return  UIImage.init(named: string)
 }
+
+

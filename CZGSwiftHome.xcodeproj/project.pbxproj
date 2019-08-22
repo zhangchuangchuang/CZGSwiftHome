@@ -33,6 +33,7 @@
 		F4FA1A0522E86218007EA60F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4FA1A0422E86218007EA60F /* Assets.xcassets */; };
 		F4FA1A1322E86218007EA60F /* CZGSwiftHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA1A1222E86218007EA60F /* CZGSwiftHomeTests.swift */; };
 		F4FA1A1E22E86219007EA60F /* CZGSwiftHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA1A1D22E86219007EA60F /* CZGSwiftHomeUITests.swift */; };
+		F4FB05B5230E6B3A005331A1 /* NSObject+ZCTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FB05B4230E6B3A005331A1 /* NSObject+ZCTool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		F4FA1A1922E86218007EA60F /* CZGSwiftHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CZGSwiftHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4FA1A1D22E86219007EA60F /* CZGSwiftHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CZGSwiftHomeUITests.swift; sourceTree = "<group>"; };
 		F4FA1A1F22E86219007EA60F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4FB05B4230E6B3A005331A1 /* NSObject+ZCTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ZCTool.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				F4307F4923014F4E00964CCB /* UIColor+ZCTool.swift */,
 				F4307F502301840400964CCB /* UIView+ZCTool.swift */,
 				F4307F52230185E800964CCB /* UIImage+ZCTool.swift */,
+				F4FB05B4230E6B3A005331A1 /* NSObject+ZCTool.swift */,
 			);
 			path = categories;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 				F40C11D1230BCA27007342C9 /* ZCBaseView.swift in Sources */,
 				F4F2AA4D22FEB9E5007BD545 /* ZCWebViewController.swift in Sources */,
 				F4FA19FE22E86216007EA60F /* AppDelegate.swift in Sources */,
+				F4FB05B5230E6B3A005331A1 /* NSObject+ZCTool.swift in Sources */,
 				F40B92B62302E7040017074E /* ZCHomeTabBarController.swift in Sources */,
 				F4307F512301840400964CCB /* UIView+ZCTool.swift in Sources */,
 				F4F72ADB230424450011F00F /* ZCDetailViewController.swift in Sources */,

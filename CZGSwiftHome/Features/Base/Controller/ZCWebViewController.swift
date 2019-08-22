@@ -31,8 +31,9 @@ class ZCWebViewController: ZCBaseViewController,WKNavigationDelegate,WKUIDelegat
         super.viewDidLoad()
         self.view.backgroundColor = RGB0X(hexValue: 0xf6f6f6)
         setUI()
-        loadWeb(string: url)
+        loadWeb(string: url)       
     }
+
     //MARK: ++++ WKScriptMessageHandler
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         DispatchQueue.global().async {
@@ -40,7 +41,13 @@ class ZCWebViewController: ZCBaseViewController,WKNavigationDelegate,WKUIDelegat
             
         }
     }
-    
+    override func backBarButtonItemAction() {
+        if self.customWebView.canGoBack {
+            self.customWebView.goBack()
+        }else{
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
     
     deinit {
         self.customWebView.removeObserver(self, forKeyPath: "estimatedProgress")
@@ -93,7 +100,7 @@ extension ZCWebViewController{
     func addNaviCloseButton() {
          removeNavIcloseBut()
         self.closeBut = UIButton(type: .custom)
-        self.closeBut.frame = CGRect(x: 50, y:44, width: 100, height: 444)
+        self.closeBut.frame = CGRect(x: 50, y:44, width: 10, height: 44)
         self.closeBut.setTitle("关闭", for: .normal)
         self.closeBut.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
         self.closeBut.setTitleColor(RGB0X(hexValue: 0x556d80), for: .normal)
