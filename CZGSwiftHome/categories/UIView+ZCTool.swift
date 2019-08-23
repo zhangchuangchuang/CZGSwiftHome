@@ -7,3 +7,20 @@
 //
 
 import Foundation
+import UIKit
+
+
+extension UIView{
+    var  additionalData: AnyObject{
+        set{
+             let key: UnsafeRawPointer! = UnsafeRawPointer.init(bitPattern: "additionlData".hashValue)
+            objc_setAssociatedObject(self, key, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
+        }
+        get{
+              let key: UnsafeRawPointer! = UnsafeRawPointer.init(bitPattern: "additionlData".hashValue)
+            return objc_getAssociatedObject(self, key) as AnyObject 
+        }
+    }
+    
+    
+}
