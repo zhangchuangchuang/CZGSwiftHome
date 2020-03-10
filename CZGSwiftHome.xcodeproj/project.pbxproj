@@ -60,6 +60,7 @@
 		F400AFDD22FEA9E000780B64 /* App使用规则说明.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "App使用规则说明.txt"; sourceTree = "<group>"; };
 		F40B92B52302E7040017074E /* ZCHomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCHomeTabBarController.swift; sourceTree = "<group>"; };
 		F40C11D0230BCA27007342C9 /* ZCBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseView.swift; sourceTree = "<group>"; };
+		F41F75092417BD67006FA4CA /* ZCBrigdge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCBrigdge.h; sourceTree = "<group>"; };
 		F4307F4923014F4E00964CCB /* UIColor+ZCTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ZCTool.swift"; sourceTree = "<group>"; };
 		F4307F4E2301593900964CCB /* ZCMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMacros.swift; sourceTree = "<group>"; };
 		F4307F502301840400964CCB /* UIView+ZCTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ZCTool.swift"; sourceTree = "<group>"; };
@@ -185,6 +186,7 @@
 		F400AFC422FE955F00780B64 /* AppEntry */ = {
 			isa = PBXGroup;
 			children = (
+				F41F75092417BD67006FA4CA /* ZCBrigdge.h */,
 				F4FA19FD22E86216007EA60F /* AppDelegate.swift */,
 				F4FA1A0922E86218007EA60F /* Info.plist */,
 				F4FA1A0422E86218007EA60F /* Assets.xcassets */,
@@ -714,6 +716,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zc.CZGSwiftHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/zhangchuangchuang/Desktop/Github_project/CZGSwiftHome/CZGSwiftHome/AppEntry/ZCBrigdge.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -734,6 +737,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zc.CZGSwiftHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/zhangchuangchuang/Desktop/Github_project/CZGSwiftHome/CZGSwiftHome/AppEntry/ZCBrigdge.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

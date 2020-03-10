@@ -1,3 +1,4 @@
+source 'https://github.com/CocoaPods/Specs.git'
 # Uncomment the next line to define a global platform for your project
 
 platform :ios, '9.0'
@@ -7,5 +8,6 @@ use_frameworks!
 target 'CZGSwiftHome' do
 
 pod 'Alamofire'
-
+pod 'Moya/RxSwift'
+pod 'Masonry'
 end
