@@ -10,4 +10,5 @@ target 'CZGSwiftHome' do
 pod 'Alamofire'
 pod 'Moya/RxSwift'
 pod 'Masonry'
+pod 'SDWebImage'
 end

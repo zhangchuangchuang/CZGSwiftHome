@@ -11,6 +11,7 @@ import UIKit
 
 
 extension UIView{
+    //创建视图关联对象
     var  additionalData: AnyObject{
         set{
              let key: UnsafeRawPointer! = UnsafeRawPointer.init(bitPattern: "additionlData".hashValue)

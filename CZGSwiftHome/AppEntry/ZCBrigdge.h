@@ -10,7 +10,7 @@
 #define ZCBrigdge_h
 
 #import "Masonry.h"
-
+#import <SDWebImage/UIImageView+WebCache.h>
 
 
 #endif /* ZCBrigdge_h */
